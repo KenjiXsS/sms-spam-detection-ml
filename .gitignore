@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+venv/
+env/
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Dados (não versionar — ver instruções de download no README)
+data/raw/
+data/processed/
+*.csv
+*.zip
+*.tsv
+
+# Modelos serializados
+*.pkl
+*.joblib
+*.h5
+
+# Visualizações geradas (exceto as do artigo)
+viz*.png
+*.png
+!article/figures/*.png
+
+# Sistema
+.DS_Store
+Thumbs.db
+*.log
