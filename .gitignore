@@ -12,11 +12,16 @@ env/
 *.ipynb_checkpoints
 
 # Dados (não versionar — ver instruções de download no README)
-data/raw/
-data/processed/
-*.csv
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
 *.zip
 *.tsv
+
+# Experimentos (versionar apenas o CSV de rastreio)
+experiments/*
+!experiments/experiments.csv
 
 # Modelos serializados
 *.pkl

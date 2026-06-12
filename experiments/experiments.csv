@@ -1,0 +1,4 @@
+date,model,parameters,cv_f1_mean,cv_f1_std,test_f1_spam,test_accuracy,test_auc_roc,observations
+2026-06-10,MultinomialNB,"alpha=1.0; tfidf_max_features=5000; ngram_range=(1,2); min_df=2; sublinear_tf=True",0.8554,0.0299,0.8472,0.9662,0.9809,Baseline. Boa precisão (0.99) mas recall baixo (0.75). Robusto e rápido.
+2026-06-10,LogisticRegression,"C=1.0; max_iter=1000; random_state=42; tfidf_max_features=5000; ngram_range=(1,2); min_df=2; sublinear_tf=True",0.7275,0.0479,0.8276,0.9613,0.9909,Alta variância no CV (std=0.048). Interpretável via coeficientes. AUC alto (0.99).
+2026-06-10,LinearSVC,"C=1.0; max_iter=2000; random_state=42; tfidf_max_features=5000; ngram_range=(1,2); min_df=2; sublinear_tf=True",0.9065,0.0250,0.9084,0.9778,0.9932,Melhor modelo em todas as métricas. McNemar vs LR: p=0.0014 (diferença significativa).

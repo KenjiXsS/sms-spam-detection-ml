@@ -35,25 +35,34 @@ Teste McNemar (LR vs SVM): **p=0,0014** — SVM Linear é estatisticamente super
 
 ## Instalação e Execução
 
-### Opção 1 — Google Colab (recomendado)
+### Opção 1 — Docker (recomendado — ambiente reproduzível)
+
+```bash
+# Construir e iniciar o container
+docker compose up --build
+
+# Acessar o Jupyter no navegador:
+# http://localhost:8888
+```
+
+Abra `notebooks/machine_learning.ipynb` e execute todas as células em ordem (`Kernel → Restart & Run All`).  
+O dataset já está incluído no container. Não é necessário instalar nada além do Docker.
+
+### Opção 2 — Google Colab
 
 1. Abra o notebook `notebooks/machine_learning.ipynb` no Google Colab.
 2. Execute todas as células em ordem (Ctrl+F9 ou *Runtime → Run all*).
-3. O dataset será baixado automaticamente na primeira célula de dados.
 
-### Opção 2 — Ambiente local
+### Opção 3 — Ambiente local (Python 3.10+)
 
 ```bash
-# Python 3.10+ recomendado
 pip install -r requirements.txt
-
-# Executar o notebook
-jupyter notebook notebooks/machine_learning.ipynb
+jupyter notebook --notebook-dir=. notebooks/machine_learning.ipynb
 ```
 
 ### Reprodutibilidade
 
-Todos os componentes estocásticos usam `random_state=42`. Versão de Python: **3.10+**.  
+Todos os componentes estocásticos usam `random_state=42`. Versão de Python: **3.10**.  
 Resultados esperados estão registrados em `experiments/experiments.csv`.
 
 ## Estrutura do Repositório
